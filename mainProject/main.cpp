@@ -12,6 +12,10 @@ int main() {
 		"JATOBA", "F106", 6, 2, 253.33, true, 26,
 		"21.12.21");
 
+
+	//MusicalInstrument test03(electricGuitar1);
+	//cout << "	copy constructor"	 << test03.toString() << endl;
+
 	cout << test01.toString() << endl;
 	cout << electricGuitar1.toString() << endl;
 	cout << electricGuitar2.toString() << endl;
