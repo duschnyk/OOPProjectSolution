@@ -20,8 +20,8 @@ public:
 		"Type S", "Type E", "Type V", "Type G" };
 
 		const int modelsOfPickupsSize = 6;
-		const string modelsOfPickups[]{ "DiMarzio", "Bellcat", "Musiclily", "Seymour",
-		"Shadow", "Quntum" };
+		const string modelsOfPickups[]{ "DiMarzio", "Bellcat", "Musiclily", 
+			"Seymour", "Shadow", "Quntum" };
 
 		const int materialsOfBodySize = 10;
 		const string materialsOfBody[]{ "Koa", "Ash", "Walnut", "Alder", "Maple",
@@ -32,11 +32,18 @@ public:
 			"Basswood", "Mahogany", "Agathis", "Poplar","Spruce" };
 
 		const int materialsOfFretboardSize = 8;
-		const string materialsOfFretboard[]{ "Maple", "Rosewood", "Walnut", "Ebony", "Jatoba", "Mahogany", "Wenge", "Magatis" };
+		const string materialsOfFretboard[]{ "Maple", "Rosewood", "Walnut", 
+			"Ebony", "Jatoba", "Mahogany", "Wenge", "Magatis" };
 
 
 		const int modelsOfBridgeSize = 8;
-		const string modelsOfBridge[]{ "F106", "F107", "F108", "F88", "F0909", "G300", "Mg-500", "ASDF1234" };
+		const string modelsOfBridge[]{ "F106", "F107", "F108", "F88", "F0909", 
+			"G300", "Mg-500", "ASDF1234" };
+
+		const int dateOfReleaseSize = 16;
+		const string datesOfRelease[]{"1960","1961", "1969","1970", "1974", "1979", 
+			"2000", "2001", "2002", "2007", "2009", "2011", "2015", "2021", 
+			"2022", "2025" };
 
 		int amountOfStringsMAX = 8;
 		int amountOfStringsMIN = 6;
@@ -61,12 +68,11 @@ public:
 			temp.amountOfStrings = rand() % (amountOfStringsMAX - amountOfStringsMIN + 1) + amountOfStringsMIN;
 			temp.amountOfPickups = rand() % (amountOfPickupsMAX - amountOfPickupsMIN + 1) + amountOfPickupsMIN;
 			temp.price = rand() % (priceMAX - priceMIN + 1) + priceMIN;
+			temp.isInOffer = rand() % 2;
+			temp.isInOffer == true ? temp.amountInOffer = rand() % 100 + 1 : temp.amountInOffer = 0;
 
 			musicalInstruments[i] = temp;
 		}
-
-
-
 	}
 };
 

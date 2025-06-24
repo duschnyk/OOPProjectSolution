@@ -1,5 +1,6 @@
 #include "MusicalInstrument.h"
 #include "Initializer.h"
+#include "Manager.h"
 
 int main() {
 	//MusicalInstrument test01;
@@ -38,6 +39,18 @@ int main() {
 	{
 		cout << musicalInstruments[i].toString() << endl;
 	}
+
+	Manager manager;
+
+	MusicalInstrument cheapestInstrument = 
+		manager.findTheCheapestInstrument(musicalInstruments, size);
+	MusicalInstrument TheMostExpensiveInstrument =
+		manager.findTheMostExpensiveInstrument(musicalInstruments, size);
+	double average = manager.findAveragePriceOfAnInstrumet(musicalInstruments, size);
+
+	cout << "The cheapest instrument is: " << cheapestInstrument.toString() << endl;
+	cout << "The most expensive instrument is: " << TheMostExpensiveInstrument.toString() << endl;
+	cout << "The average price of an instrument is: " << average << endl;
 
 	delete[] musicalInstruments;
 

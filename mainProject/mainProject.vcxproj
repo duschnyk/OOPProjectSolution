@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClInclude Include="Initializer.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="MusicalInstrument.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Initializer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="MusicalInstrument.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
