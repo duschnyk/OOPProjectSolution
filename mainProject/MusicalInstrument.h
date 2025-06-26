@@ -3,7 +3,7 @@
 
 class MusicalInstrument
 {
-public:
+private:
 	string typeOfMusicalInstrument;
 	string brand;
 	string model;
@@ -19,6 +19,8 @@ public:
 	int amountInOffer;
 	string dateOfRelease;
 
+
+public:
 	//default constructor
 	MusicalInstrument() : MusicalInstrument("instrument not found...",
 		"none", "none", false, 0) {
@@ -37,22 +39,7 @@ public:
 		string modelOfPickups, string materialOfBody, string materialOfNeck,
 		string materialOfFretboard, string modelOfBridge, int amountOfStrings,
 		int amountOfPickups, double price, bool isInOffer, int amountInOffer,
-		string dateOfRelease) {
-		this->typeOfMusicalInstrument = typeOfMusicalInstrument;
-		this->brand = brand;
-		this->model = model;
-		this->modelOfPickups = modelOfPickups;
-		this->materialOfBody = materialOfBody;
-		this->materialOfNeck = materialOfNeck;
-		this->materialOfFretboard = materialOfFretboard;
-		this->modelOfBridge = modelOfBridge;
-		this->amountOfStrings = amountOfStrings;
-		this->amountOfPickups = amountOfPickups;
-		this->price = price;
-		this->isInOffer = isInOffer;
-		this->amountInOffer = amountInOffer;
-		this->dateOfRelease = dateOfRelease;
-	}
+		string dateOfRelease);
 
 	//copy constructor
 	MusicalInstrument(const MusicalInstrument& musicalInstrument)
@@ -73,26 +60,38 @@ public:
 			musicalInstrument.dateOfRelease) {
 	}
 
-	~MusicalInstrument() {};
+	~MusicalInstrument();
 
-	string toString() {
-		string s = typeOfMusicalInstrument + ", " + "\n";
-		s += "brand: " + brand + ", " + "\n";
-		s += "model: " + model + ", " + "\n";
-		s += "pickups: " + modelOfPickups + ", " + "\n";
-		s += "materialOfBody: " + materialOfBody + ", " + "\n";
-		s += "materialOfNeck: " + materialOfNeck + ", " +"\n";
-		s += "materialOfFretboard: " + materialOfFretboard + ", " + "\n";
-		s += "amount of strings: " + to_string(amountOfStrings) + ", " + "\n";
-		s += "amount of pickups: " + to_string(amountOfPickups) + ", " + "\n";
-		s += "price: " + to_string(price) + ", " + "\n";
-		s += "is in offer? ";
-		s += (isInOffer ? "Yes! " : "No ");
-		s += "\n";
-		s += "amount in offer: " + to_string(amountInOffer) + ", " + "\n";
-		s += "date of release: " + dateOfRelease + ", " + "\n";
+	string getTypeOfMusicalInstrument();
+	void setTypeOfMusicalInstrument(string typeOfMusicalInstrument);
+	string getBrand();
+	void setBrand(string brand);
+	string getModel();
+	void setModel(string model);
+	string getModelOfPickups();
+	void setModelOfPickups(string modelOfPickups);
+	string getMaterialOfBody();
+	void setMaterialOfBody(string materialOfBody);
+	string getMaterialOfNeck();
+	void setMaterialOfNeck(string materialOfNeck);
+	string getMaterialOfFretboard();
+	void setMaterialOfFretboard(string materialOfFretboard);
+	string getModelOfBridge();
+	void setModelOfBridge(string modelOfBridge);
+	int getAmountOfStrings();
+	void setAmountOfStrings(int amountOfStrings);
+	int getAmountOfPickups();
+	void setAmountOfPickups(int amountOfPickups);
+	double getPrice();
+	void setPrice(double price);
+	bool getIsInOffer();
+	void setIsInOffer(bool isInOffer);
+	int getAmountInOffer();
+	void setAmountInOffer(int amountInOffer);
+	string getDateOfRelease();
+	void setDateOfRelease(string dateOfRelease);
 
-		return s;
-	}
+
+	string toString();
 };
 
