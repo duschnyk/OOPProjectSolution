@@ -4,22 +4,19 @@
 class Manager
 {
 public:
-	/*MusicalInstrument findInstrumentsInOffer(
+	MusicalInstrument findInstrumentInOffer(
 		MusicalInstrument* musicalInstruments, int size) {
-		MusicalInstrument* musicalInstrumentsInOffer = new MusicalInstrument[1];
 
 		for (int i = 0, j = 0; i < size; i++)
 		{
 			if (musicalInstruments[i].isInOffer == true)
 			{
-				musicalInstrumentsInOffer[j] = musicalInstruments[i];
-				j++;
-				musicalInstrumentsInOffer = new MusicalInstrument;
+				return musicalInstruments[i];
 			}
 		}
 
-		return musicalInstrumentsInOffer;
-	}*/
+		return MusicalInstrument();
+	}
 
 	MusicalInstrument findTheCheapestInstrument(
 		MusicalInstrument* musicalInstruments, int size) {

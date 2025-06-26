@@ -42,15 +42,29 @@ int main() {
 
 	Manager manager;
 
+	MusicalInstrument musicalInstrumentInOffer = 
+		manager.findInstrumentInOffer(musicalInstruments, size);
+
 	MusicalInstrument cheapestInstrument =
 		manager.findTheCheapestInstrument(musicalInstruments, size);
+
 	MusicalInstrument TheMostExpensiveInstrument =
 		manager.findTheMostExpensiveInstrument(musicalInstruments, size);
+
 	double average = manager.findAveragePriceOfAnInstrumet(musicalInstruments, size);
 
-	cout << "The cheapest instrument is: " << "\n" << cheapestInstrument.toString() << endl;
-	cout << "The most expensive instrument is: " << "\n" << TheMostExpensiveInstrument.toString() << endl;
-	cout << "The average price of an instrument is: " << average << endl;
+
+	cout << "The cheapest instrument is: " << "\n" 
+		<< cheapestInstrument.toString() << endl;
+
+	cout << "The most expensive instrument is: " << "\n" 
+		<< TheMostExpensiveInstrument.toString() << endl;
+
+	cout << "Example of an instrunent in offer: " << "\n" 
+		<< musicalInstrumentInOffer.toString() << endl;
+
+	cout << "The average price of an instrument is: " 
+		<< average << endl;
 
 	delete[] musicalInstruments;
 
